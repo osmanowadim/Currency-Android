@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Обмін валют</string>
+    <string name="internet_error">Немає підключення до Інтернету</string>
+    <string name="currency_error">Помилка під час отримання валют</string>
+    <string name="exchange_error">Помилка під час отримання курсу валют</string>
+    <string name="exchange_on">Обмін дійсний на %s</string>
+    <string name="exchange_id_for">Валютний код = %s</string>
+    <string name="exchange_rate_for">Курс валют = %s</string>
+    <string name="empty_view">Поки немає валют</string>
+
+</resources>

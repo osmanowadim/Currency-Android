@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk
+    buildToolsVersion rootProject.ext.build_tools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk
+        targetSdkVersion rootProject.ext.target_sdk
+
+        versionCode rootProject.ext.version_code
+
+        testInstrumentationRunner rootProject.ext.test_runner
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += [file("$buildDir/generated/source/kapt/main")]
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas".toString())
+        }
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+
+    def dataDependencies = rootProject.ext.dataDependencies
+
+    implementation dataDependencies.kotlinStdlib
+
+    implementation dataDependencies.dagger
+    kapt dataDependencies.daggerCompiler
+    implementation dataDependencies.daggerAndroid
+    kapt dataDependencies.daggerAndroidProc
+
+    api dataDependencies.roomRuntime
+    kapt dataDependencies.roomCompiler
+    implementation dataDependencies.roomRxjava2
+
+    implementation dataDependencies.rxJava
+    implementation dataDependencies.rxAndroid
+
+    implementation dataDependencies.retrofit
+    implementation dataDependencies.retrofitConverter
+    implementation dataDependencies.retrofitRxAdapter
+    implementation dataDependencies.okHttpLogInter
+    implementation dataDependencies.xml
+
+    implementation dataDependencies.androidAnnotations
+
+}

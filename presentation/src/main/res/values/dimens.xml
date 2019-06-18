@@ -1,0 +1,13 @@
+<resources>
+
+    <dimen name="tv_textSize">18sp</dimen>
+
+    <dimen name="activity_detail_date_tv_marginTop">20dp</dimen>
+    <dimen name="activity_detail_date_tv_marginEnd">20dp</dimen>
+    <dimen name="activity_detail_rate_tv_marginTop">20dp</dimen>
+    <dimen name="item_currency_container_height">50dp</dimen>
+    <dimen name="item_currency_code_tv_marginStart">20dp</dimen>
+    <dimen name="item_currency_code_tv_width">50dp</dimen>
+    <dimen name="item_currency_name_tv_marginStart">20dp</dimen>
+
+</resources>

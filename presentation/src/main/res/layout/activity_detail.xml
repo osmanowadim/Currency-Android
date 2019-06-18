@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/activity_detail_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:visibility="visible"
+                app:titleTextColor="@android:color/white">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+            android:id="@+id/activity_detail_container"
+            android:layout_below="@+id/activity_detail_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/activity_detail_date_tv"
+                android:layout_marginTop="@dimen/activity_detail_date_tv_marginTop"
+                android:layout_marginEnd="@dimen/activity_detail_date_tv_marginEnd"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/tv_textSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="04.06.2019"/>
+
+        <TextView
+                android:id="@+id/activity_detail_id_tv"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tv_textSize"
+                tools:text="32"/>
+
+        <TextView
+                android:id="@+id/activity_detail_rate_tv"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/activity_detail_rate_tv_marginTop"
+                android:layout_below="@+id/activity_detail_id_tv"
+                android:textSize="@dimen/tv_textSize"
+                tools:text="1.22"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
